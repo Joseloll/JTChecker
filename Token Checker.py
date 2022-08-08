@@ -30,7 +30,7 @@ def menu():
                                         
                                      [1] Check Single Discord Token 
                                      [2] Check Multi Discord Tokens 
-                                     [3] Discord Token logging
+                                     [3] Discord Token Login
                                      [4] Exit
                                     Enter Your Choice: """)
     if choice == "1":
