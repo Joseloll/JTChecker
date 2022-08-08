@@ -12,10 +12,11 @@
 
 # Update
 - Added Where It Will Tell You If The Discord Token Is Locked
+- Added Discord Token Leaver For A Single Token And Multiples Tokens
+- Added Where You Can Get Info About The Token
 
-# To Do 
-- Add Where You Can See The Info About The Discord Token
-- Will Add Token Joiner/Leaver 
+
+
 
 # Usage
 - Python 3 https://python.org
