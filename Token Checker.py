@@ -1,3 +1,5 @@
+
+
 import time
 import requests
 import os
@@ -57,6 +59,13 @@ def single():
     time.sleep(2)
     os.system('cls')
     menu()
+  
+  elif check.status_code == 403:
+    print(Fore.MAGENTA + "Discord Token Is Locked")
+    time.sleep(2)
+    os.system('cls')
+    menu()
+
 
   else:
     print(Fore.RED + "Discord Token Is Invalid")
@@ -75,6 +84,7 @@ def multi():
     file = open(name, "r").read().split('\n')
     Valid = open('Valid.txt', 'w')
     Invalid = open('Invalid.txt', 'w')
+    Locked = open('Locked.txt', 'w')
     for line in file:
         tokens = line.strip("\n")
         headers = {'Content-Type': 'application/json', 'authorization': tokens}
@@ -83,6 +93,13 @@ def multi():
             print(Fore.GREEN + "{} Token Is Valid.".format(line.strip("\n")))
             time.sleep(1)
             Valid.write(f'{line}\n')
+        
+        elif check.status_code == 403:
+             print(Fore.MAGENTA + "{} Token Is Locked.".format(line.strip("\n")))
+             time.sleep(1)
+             Locked.write(f'{line}\n')
+    
+     
         else:
             print(Fore.RED + "{} Token Is Invalid.".format(line.strip("\n")))
             time.sleep(1)
@@ -117,8 +134,4 @@ def login():
 def exit():
     sys.exit
 
-
-
-
-
-main()
+menu()
