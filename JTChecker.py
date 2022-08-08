@@ -129,7 +129,12 @@ def login():
         """
    driver.execute_script(script + f'login("{token}")')
    while True:
-     print(Fore.GREEN + "SucessFully Logined As" + token)
+    os.system('cls')
+    time.sleep(3)
+    print(Fore.GREEN + "SucessFully Logined As" + token)
+    time.sleep(3)
+    os.system('cls')
+    menu()
 
 
 
