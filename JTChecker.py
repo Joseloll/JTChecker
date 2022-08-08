@@ -34,7 +34,7 @@ def menu():
                                      [5] Single Discord Token Leaver
                                      [6] Multi Discord Token Leaver
                                      [7] Exit
-                                    Enter Your Choice: """)
+                                     Enter Your Choice: """)
     if choice == "1":
         single()
     elif choice == "2":
