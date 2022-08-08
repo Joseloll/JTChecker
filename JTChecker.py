@@ -134,7 +134,7 @@ def login():
 def info():
     token = input("Enter Your Discord Token Here:")
     headers = {'Authorization': token, 'Content-Type': 'application/json'}
-    check = requests.get('https://discord.com/api/v9/users/@me','https://discordapp.com/api/v6/users/@me/billing/subscriptions', headers=headers)
+    check = requests.get('https://discord.com/api/v9/users/@me','https://discordapp.com/api/v9/users/@me/billing/subscriptions', headers=headers)
     print(Fore.YELLOW + "Please Wait 3 Secs We Are Fetching The Info For:"+ Fore.LIGHTCYAN_EX + token)
     time.sleep(3)
     if check.status_code == 200:
