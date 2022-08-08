@@ -12,8 +12,8 @@
 
 # Update
 - Added Where It Will Tell You If The Discord Token Is Locked
-- Added Discord Token Leaver For A Single Token And Multiples Tokens
-- Added Where You Can Get Info About The Token
+- Added Discord Token Leaver For A Single Discord Token And Multiple Discord Tokens
+- Added Where You Can Get Info About The Discord Token
 
 
 
