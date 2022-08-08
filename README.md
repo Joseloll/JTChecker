@@ -9,6 +9,9 @@
 - Checks Multiple Of Discord Tokens To See If The Tokens Are Valid Or Not
 - Login Into Discord Token
 
+# Update
+- Added Where It Will Tell You If The Discord Token Is Locked
+
 # To Do 
 - Added Where When You Check The Discord Token And Its Valid You Can See The Info About The Token
 
