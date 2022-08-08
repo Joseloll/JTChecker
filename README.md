@@ -1,5 +1,5 @@
 # JTChecker
-![image](https://user-images.githubusercontent.com/106576578/183334449-bfb4ff7d-c93b-45fa-a69c-414d73dbb58a.png)
+![image](https://user-images.githubusercontent.com/106576578/183482893-35e9cef9-0f91-467e-8fa7-ec4d31da34db.png)
 
 
 # About This Project
