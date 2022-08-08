@@ -136,7 +136,7 @@ def login():
 def info():
     token = input("Enter Your Discord Token Here:")
     headers = {'Authorization': token, 'Content-Type': 'application/json'}
-    check = requests.get('https://discord.com/api/v9/users/@me','https://discordapp.com/api/v9/users/@me/billing/subscriptions', headers=headers)
+    check = requests.get('https://discord.com/api/v9/users/@me', headers=headers)
     print(Fore.YELLOW + "Please Wait 3 Secs We Are Fetching The Info For:"+ Fore.LIGHTCYAN_EX + token)
     time.sleep(3)
     if check.status_code == 200:
@@ -146,7 +146,8 @@ def info():
         email = check.json()['email']
         avatar_id = check.json()['avatar']
         has_nitro = False
-        nitro_data = check.json()
+        checks = requests.get('https://discordapp.com/api/v9/users/@me/billing/subscriptions', headers=headers)
+        nitro_data = checks.json()
         has_nitro = bool(len(nitro_data) > 0)
         print(f'''
         {Fore.YELLOW}Token:{Fore.RESET}{Fore.LIGHTCYAN_EX} {token} {Fore.RESET}
@@ -155,7 +156,7 @@ def info():
         {Fore.YELLOW}Avatar-Id:{Fore.RESET}{Fore.LIGHTCYAN_EX}{avatar_id} {Fore.RESET}
         {Fore.YELLOW}Email:{Fore.RESET}{Fore.LIGHTCYAN_EX} {email}  {Fore.RESET}
         {Fore.YELLOW}Phone Number:{Fore.RESET}{Fore.LIGHTCYAN_EX}  {phone if phone else "No Phone Number Was Found On The Account"} {Fore.RESET}
-        {Fore.YELLOW}Nitro:{Fore.RESET}{Fore.LIGHTCYAN_EX} {has_nitro} {Fore.RESET}
+        {Fore.YELLOW}Nitro:{Fore.RESET}{Fore.LIGHTCYAN_EX} {has_nitro if has_nitro else "The Account Dosent Have Nitro"} {Fore.RESET}
             ''')
         input()
     exit = input(Fore.CYAN + "Would You Like To Exit y/n:")
