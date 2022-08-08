@@ -14,7 +14,8 @@
 - Added Where It Will Tell You If The Discord Token Is Locked
 
 # To Do 
-- Added Where When You Check The Discord Token And Its Valid You Can See The Info About The Token
+- Add Where You Can See The Info About The Discord Token
+- Will Add Token Joiner/Leaver 
 
 # Usage
 - Python 3 https://python.org
